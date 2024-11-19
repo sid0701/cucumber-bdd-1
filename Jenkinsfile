@@ -2,8 +2,7 @@ pipeline{
     agent any
 
     parameters {
-            choice choices: ['chrome', 'firefox'], name: 'Browser',
-            
+            choice choices: ['chrome', 'firefox'], name: 'Browser'
         }
 
     stages{
