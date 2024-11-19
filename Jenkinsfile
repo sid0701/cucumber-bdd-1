@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("stage-1"){
             steps{
-                bat "mvn clean test -Dbrowser="$browser"", parameters: [string(name: 'browser', value: 'chrome')]
+                bat "mvn clean test -Dbrowser="$browser"", parameters: [string(name: 'browser', value: 'firefox')]
             }
         }
         stage("stage-2"){
