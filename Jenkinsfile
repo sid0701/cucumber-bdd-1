@@ -3,7 +3,8 @@ pipeline{
 
     parameters {
             {
-                choice choices: ['chrome', 'firefox'], name: 'Browser'
+                string(name: 'browser', defaultValue: 'chrome')
+                string(name: 'tag', defaultValue: 'PlaceOrder')
             }
         }
 
