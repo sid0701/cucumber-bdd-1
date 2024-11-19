@@ -2,8 +2,12 @@ pipeline{
     agent any
 
     parameters {
-            choice choices: ['chrome', 'firefox'], name: 'Browser',
-            choice choices: ['PlaceOrder', 'OffersPage'], name: 'Tag'
+            {
+                choice choices: ['chrome', 'firefox'], name: 'Browser'
+            },
+            {
+                choice choices: ['PlaceOrder', 'OffersPage'], name: 'Tag'
+                }
         }
 
     stages{
