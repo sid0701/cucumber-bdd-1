@@ -4,8 +4,7 @@ pipeline{
     stages{
         stage("stage-1"){
             steps{
-                echo "mvn clean"
-                echo "mvn test"
+                mvn clean test
             }
         }
         stage("stage-2"){
