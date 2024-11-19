@@ -3,15 +3,14 @@ pipeline{
 
     parameters {
             {
-                string(name: 'browser', defaultValue: 'chrome')
-                string(name: 'tag', defaultValue: 'PlaceOrder')
+                choice choices: ['chrome', 'firefox','edge'], name: 'Browser'
             }
         }
 
     stages{
         stage("stage-1"){
             steps{
-                bat "mvn clean test -Dbrowser=${params.Browser} -Dcucumber.filter.tags=@${params.Tag}"
+                bat "mvn clean test -Dbrowser=${params.Browser}"
             }
         }
         stage("stage-2"){
