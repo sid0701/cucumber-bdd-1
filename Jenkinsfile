@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("stage-1"){
             steps{
-                mvn clean test
+                clean test
             }
         }
         stage("stage-2"){
