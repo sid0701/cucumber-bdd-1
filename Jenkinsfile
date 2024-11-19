@@ -1,10 +1,14 @@
 pipeline{
     agent any
 
+    parameters {
+            choice choices: ['chrome', 'firefox'], name: 'Browser'
+        }
+
     stages{
         stage("stage-1"){
             steps{
-                bat "mvn clean test -Dbrowser="$browser""
+                bat "mvn clean test -Dbrowser=${params.Browser}"
             }
         }
         stage("stage-2"){
